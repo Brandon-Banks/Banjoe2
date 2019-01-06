@@ -1,0 +1,28 @@
+
+.menu 
+{
+    overflow: hidden;
+    background-color: #242527;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu a
+{
+    font-family: impact, sans-serif;
+    font-size: 25px;
+    float: left;
+    display: block;
+    color: #CC3226;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover
+{
+    background: whitesmoke;
+    color: #8B395F;
+}

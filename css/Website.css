@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+body
+{
+    background-image: url("kurtrussell2.png");
+    background-repeat: no-repeat;
+    background-position: 100% 138px;
+    background-color: #f9f8e8;
+}
+
+@font-face
+{
+    font-family: goonies;
+    src: url('Goonies.ttf');
+}
+
+.h1
+{
+    font-family: 'Aldrich';
+    color: #16940F;
+    
+}
+
+.headers
+{
+    font-family: 'Aldrich';
+    color: #16940F;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.toplogo
+{
+    z-index: 99;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    height: 1400;
+}
+
+.line
+{
+    opacity: .3;
+}
+
+.topnav 
+{
+    z-index: 98;
+    font-family: 'Aldrich';
+    background-color: #8B395F;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.topnav a
+{
+    float: right;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.topnav a:hover
+{
+    background-color: whitesmoke;
+    color: #A38746;
+}
+
+.topnav a.active
+{
+    background-color: #16940F;
+    color: whitesmoke;
+}
+
+.logo
+{
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    width: 50%;
+}
+
+.p
+{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 21px;
+    width: 25%;
+    /* column-count: 3; */
+    /* column-span: all; */
+    /* column-gap: 40px; */
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.p1 {
+    margin-top: 0px;
+}
+
+.p2
+{
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.footer
+{
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    color: #d1d0bb;
+    text-align: center;
+    height: 100px;
+}
+
+.container 
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-left: 13%;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+  
+  .poster 
+  {
+    display: block;
+    width: 75%;
+    height: auto;
+  }
+  
+  .overlay 
+  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 75%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(36,36,36);
+    border-radius: 2%;
+  }
+  
+  .container:hover .overlay 
+  {
+    opacity: .9;
+  }
+  
+  .text 
+  {
+    color: #16940F;
+    font-family: 'Aldrich';
+    font-size: 80px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
