@@ -1,10 +1,89 @@
+/* #8B395F purplish
+#f9f8e8 whitish
+#16940F green
+#A38746 gold
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Aldrich');
 body
 {
-    background-image: url("kurtrussell2.png");
+    background-image: url("Images/BanjoGuy.gif");
     background-repeat: no-repeat;
     background-position: 100% 138px;
-    background-color: #f9f8e8;
+    background-color: #8B395F;
+}
+
+.body2
+{
+    /* background-image: url("../Images/BanjoGuy.gif"); */
+    background-repeat: no-repeat;
+    background-position: 100% 138px;
+    background-color: #8B395F;
+    background-size: 30%;
+}
+
+.d
+{
+    display: flex;
+}
+
+.d2
+{
+    width: 50%;
+    min-width: 440px;
+}
+
+.d3
+{
+    display: flex;
+    min-width: 700px;
+}
+
+.image img
+{
+    float: left;
+    height: 300px;
+    transform: translate(0, 100px);
+}
+
+.body3
+{
+    background-image: url("../Images/BanjoGuyRunning.png");
+    background-repeat: no-repeat;
+    background-position: 100% 138px;
+    background-color: #8B395F;
+    background-size: 25%;
+}
+
+@keyframes scrolling
+{
+    from {background-position: 0px 550px;}
+    to {background-position: 1350px 550px;}
+}
+
+@keyframes test
+{
+    from {transform: translate(-10px, 20px)}
+    to {transform: translate(100px, 20px)}
+}
+
+.body4
+{
+    /* background-image: url("../Images/Backdrop.png"); */
+    /* background-repeat: repeat-x; */
+    /* animation: scrolling 20s linear infinite; */
+    /* background-position: 100px 550px; */
+    background-color: #8B395F;
+    background-size: 100%;
+}
+
+.footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translate(-10px, 20px);
 }
 
 @font-face
@@ -26,11 +105,19 @@ body
     color: #16940F;
     font-size: 30px;
     margin-left: 40px;
+    width: 400px;
+}
+
+.headers2
+{
+    font-family: 'Aldrich';
+    color: whitesmoke;
+    font-size: 30px;
+    margin-left: 40px;
 }
 
 .toplogo
 {
-    z-index: 99;
     position: fixed;
     top: 1%;
     left: 1%;
@@ -44,14 +131,14 @@ body
 
 .topnav 
 {
-    z-index: 98;
     font-family: 'Aldrich';
-    background-color: #8B395F;
+    background-color: #16940F;
     overflow: hidden;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
+    min-width: 656px;
 }
 
 .topnav a
@@ -72,8 +159,8 @@ body
 
 .topnav a.active
 {
-    background-color: #16940F;
-    color: whitesmoke;
+    background-color: #A38746;
+    color: darkslategray;
 }
 
 .logo
@@ -89,12 +176,30 @@ body
     display: inline-block;
     font-family: sans-serif;
     font-size: 21px;
-    width: 25%;
+    width: 300px;
+    color: whitesmoke;
     /* column-count: 3; */
     /* column-span: all; */
     /* column-gap: 40px; */
     margin-right: 40px;
     margin-left: 40px;
+    margin-top: 40px;
+}
+
+.p ol li
+{
+    list-style: none;
+}
+
+.p ol li a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.p ol li a:hover
+{
+    color: #16940F;
 }
 
 .p1 {
@@ -123,7 +228,7 @@ body
 
 .container 
 {
-    display: block;
+    display: static;
     position: relative;
     width: 100%;
     margin-left: 13%;
@@ -131,39 +236,47 @@ body
     margin-top: 7%;
     margin-bottom: 7%;
 }
-  
+ 
+.center {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -150px;
+    margin-top: -150px;
+ }
+
   .poster 
   {
     display: block;
-    width: 75%;
+    width: 100%;
     height: auto;
   }
   
   .overlay 
   {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 75%;
-    opacity: 0;
-    transition: .5s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    transition: .9s ease;
     background-color: rgb(36,36,36);
     border-radius: 2%;
+    z-index: 100;
   }
   
   .container:hover .overlay 
   {
-    opacity: .9;
+    opacity: 1;
   }
   
   .text 
   {
-    color: #16940F;
+    color: whitesmoke;
     font-family: 'Aldrich';
-    font-size: 80px;
+    font-size: 190px;
     position: absolute;
     text-align: center;
     top: 50%;
