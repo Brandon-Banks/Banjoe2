@@ -86,6 +86,21 @@ body
     transform: translate(-10px, 20px);
 }
 
+@keyframes scrolling
+{
+    from {background-position: 0px 550px;}
+    to {background-position: 1350px 550px;}
+}
+
+.body4
+{
+    background-image: url("../Images/Backdrop.png");
+    background-repeat: repeat-x;
+    animation: scrolling 20s linear infinite;
+    /* background-position: 100px 550px; */
+    background-color: #8B395F;
+    background-size: 100%;
+}
 @font-face
 {
     font-family: goonies;
@@ -106,6 +121,14 @@ body
     font-size: 30px;
     margin-left: 40px;
     width: 400px;
+}
+
+.headers2
+{
+    font-family: 'Aldrich';
+    color: whitesmoke;
+    font-size: 30px;
+    margin-left: 40px;
 }
 
 .headers2
