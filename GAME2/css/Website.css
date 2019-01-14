@@ -1,0 +1,305 @@
+/* #8B395F Purplish
+#f9f8e8 Whitish
+#16940F Greenish
+#A38746 Goldish
+#1F2021 Banjoe's Jacketish
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+body
+{
+    background-image: url("Images/BanjoGuy.gif");
+    background-repeat: no-repeat;
+    background-position: 100% 138px;
+    background-color: #8B395F;
+}
+
+.body2
+{
+    background-image: url("../Images/BanjoGuy.gif");
+    background-repeat: no-repeat;
+    background-position: 100% 138px;
+    background-color: #8B395F;
+    background-size: 30%;
+}
+
+.body3
+{
+    background-image: url("../Images/BanjoGuyRunning.png");
+    background-repeat: no-repeat;
+    background-position: 100% 138px;
+    background-color: #8B395F;
+    background-size: 25%;
+}
+
+@keyframes scrolling
+{
+    from {background-position: 0px 550px;}
+    to {background-position: 1350px 550px;}
+}
+
+.body4
+{
+    background-image: url("../Images/Backdrop.png");
+    background-repeat: repeat-x;
+    animation: scrolling 20s linear infinite;
+    /* background-position: 100px 550px; */
+    background-color: #8B395F;
+    background-size: 100%;
+}
+@font-face
+{
+    font-family: goonies;
+    src: url('Goonies.ttf');
+}
+
+.h1
+{
+    font-family: 'Aldrich';
+    color: #16940F;
+    
+}
+
+.headers
+{
+    font-family: 'Aldrich';
+    color: #16940F;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.headers2
+{
+    font-family: 'Aldrich';
+    color: whitesmoke;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.toplogo
+{
+    z-index: 99;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    height: 1400;
+}
+
+.line
+{
+    opacity: .3;
+}
+
+.topnav 
+{
+    z-index: 98;
+    font-family: 'Aldrich';
+    background-color: #16940F;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.topnav a
+{
+    float: right;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.topnav a:hover
+{
+    background-color: whitesmoke;
+    color: #A38746;
+}
+
+.topnav a.active
+{
+    background-color: #A38746;
+    color: darkslategray;
+}
+
+.logo
+{
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    width: 50%;
+}
+
+.p
+{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 21px;
+    width: 25%;
+    color: whitesmoke;
+    /* column-count: 3; */
+    /* column-span: all; */
+    /* column-gap: 40px; */
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.p ol li
+{
+    list-style: none;
+}
+
+.p ol li a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.p ol li a:hover
+{
+    color: #16940F;
+}
+
+.p1 {
+    margin-top: 0px;
+}
+
+.p2
+{
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.footer
+{
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    color: #d1d0bb;
+    text-align: center;
+    height: 100px;
+}
+
+.container 
+{
+    display: static;
+    position: relative;
+    width: 100%;
+    margin-left: 13%;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+ 
+.center {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -150px;
+    margin-top: -150px;
+ }
+
+  .poster 
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay 
+  {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.05;
+    transition: .9s ease;
+    background-color: rgb(36,36,36);
+    border-radius: 2%;
+  }
+  
+  .container:hover .overlay 
+  {
+    opacity: 1;
+  }
+  
+  .text 
+  {
+    color: whitesmoke;
+    font-family: 'Aldrich';
+    font-size: 190px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  div#DesertBackground_back {
+    position: absolute;
+    width:3000px;
+    height:540px;
+    margin:auto;
+    left: -10px;
+    background-image: url(../Images/Sky.png);
+    z-index: -5;
+}
+
+div#DesertBackground_clouds_2 {
+    position: absolute;
+    width:3000px;
+    height:540px;
+    margin:auto;
+    left: -10px;
+    background-image: url(../Images/Moon.png);
+    z-index: -4;
+}
+
+div#DesertBackground_mid {
+     position: absolute;
+     width:3000px;
+     height:540px;
+     margin:auto;
+     left: -10px;
+     background-image: url(../Images/Mountains.png);
+     z-index: -3;
+ }
+
+/* div#DesertBackground_clouds_1 {
+    position: absolute;
+    width:3000px;
+    height:540px;
+    margin:auto;
+    background-image: url(../Images/DesertBackground_clouds.png);
+    z-index: -2;
+} */
+
+div#DesertBackground_front {
+     position: absolute;
+     width:3000px;
+     height:1540px;
+     margin:auto;
+     left: -10px;
+     background-image: url(../Images/GroundExt.png);
+     z-index: -1;
+ }
+
+div#Game {
+    position: absolute;
+    width:auto;
+    height:96px;
+    top: 00px;
+	left: 30%;
+    margin:0;
+    /* content: url(../Images/Coyote_right.gif); */
+    z-index: 0;
+}

@@ -1,0 +1,55 @@
+div#DesertBackground_back {
+    position: absolute;
+    width:3000px;
+    height:540px;
+    margin:auto;
+    background-image: url(../Images/Sky.png);
+    z-index: -5;
+}
+
+div#DesertBackground_clouds_2 {
+    position: absolute;
+    width:3000px;
+    height:540px;
+    margin:auto;
+    background-image: url(../Images/Moon.png);
+    z-index: -4;
+}
+
+div#DesertBackground_mid {
+     position: absolute;
+     width:3000px;
+     height:540px;
+     margin:auto;
+     background-image: url(../Images/Mountains.png);
+     z-index: -3;
+ }
+
+/* div#DesertBackground_clouds_1 {
+    position: absolute;
+    width:3000px;
+    height:540px;
+    margin:auto;
+    background-image: url(../Images/DesertBackground_clouds.png);
+    z-index: -2;
+} */
+
+div#DesertBackground_front {
+     position: absolute;
+     width:3000px;
+     height:540px;
+     margin:auto;
+     background-image: url(../Images/GroundAni.gif);
+     z-index: -1;
+ }
+
+div#Coyote {
+    position: absolute;
+    width:auto;
+    height:262px;
+    bottom: 0px;
+	left: 240px;
+    margin:auto;
+    /* content: url(../Images/Coyote_right.gif); */
+    z-index: 0;
+}

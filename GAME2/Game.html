@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</Title>
+    <link rel="stylesheet" href="css/Website.css" />
+  <head>
+<body>
+    <script>
+        setTimeout("location.href = 'plat.html';",7000);
+    </script>
+    <iframe src="Music/DuelingBanjos.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+
+    <audio autoplay>
+        <source src="Music/DuelingBanjos.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="topnav">
+        <a href="index.html">HOME</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="design.html">DESIGN</a>
+        <a href="Screenshots.html">SCREENSHOTS</a>
+        <a class="active" href="Game.html">GAME</a>
+      </div>
+
+      <a href="index.html" div class="toplogo">
+          <img src="img/BanjoeLogo.png" alt="Banjoe Logo">
+      </div></a>
+
+  <div id="DesertBackground_back"></div>
+  <div id="DesertBackground_clouds_2"></div>
+  <div id="DesertBackground_mid"></div>
+  <div id="DesertBackground_clouds_1"></div>
+  <div id="DesertBackground_front"></div>
+  <div id="Game"></div>
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/GameUtilities.js"></script>
+  <script src="js/Game.js"></script>
+  <script src="js/GameController.js"></script>
+</body>
+</html>

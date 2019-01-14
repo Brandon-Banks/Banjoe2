@@ -1,0 +1,137 @@
+<canvas id="gc" width="1500" height="800"></canvas>
+
+<html>
+    <head>
+        <title>Banjoe</title>
+        <link rel="stylesheet" href="css/Website.css">
+        <link rel="shortcut icon" href="Images/SmallLogo.png" />
+    </head>
+<body>
+    
+    <iframe src="Music/Classical.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+
+    <audio autoplay>
+        <source src="Music/Classical.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+
+    px=py=200;
+    xv=yv=0;
+    grav=0.5;
+    onG=false;
+    holdLeft=holdRight=false;
+    plat=[];
+    window.onload=function()
+    {
+        canv=document.getElementById("gc");
+        ctx=canv.getContext("2d");
+        setInterval(update,1000/30);
+        document.addEventListener("keydown",keyDown);
+        document.addEventListener("keyup",keyUp);
+        for(i=0;i<50;i++) 
+        {
+            plat.push(
+            {
+            x:Math.random()*canv.width,
+            y:Math.random()*canv.height,
+            w:Math.random()*100+30,
+            h:Math.random()*30+20
+            }
+            );
+        }
+    }
+    function update() 
+    {
+        if(holdLeft) 
+        {
+            xv=-2;
+        }
+        if(holdRight) 
+        {
+            xv=2;
+        }
+        px+=xv;
+        py+=yv;
+        if(onG) 
+        {
+            xv *= 0.8;
+        } else 
+        {
+            yv += grav;
+        }
+    
+        if(py>=1024)
+        {
+            py=px=200;
+            xv=yv=0;
+        }
+        if(px>=1500)
+        {
+            setTimeout("location.href = 'Game.html';",0);
+        }
+        onG=false;
+        for(i=0;i<50;i++) 
+        {
+            if(px>plat[i].x && px<plat[i].x+plat[i].w &&
+                py>plat[i].y && py<plat[i].y+plat[i].h) 
+                {
+                py=plat[i].y;
+                onG=true;
+                }
+        }
+    
+        ctx.fillStyle="#8B395F";
+        ctx.fillRect(0,0,canv.width,canv.height);
+        ctx.fillStyle="#CC3226";
+        ctx.fillRect(px-5,py-20,10,20);
+        ctx.fillStyle="#1F2021";
+        ctx.fillRect(px-7,py-20,10,20);
+        ctx.fillStyle="#6C472A";
+        ctx.fillRect(px-9,py-22,16,5);
+        ctx.fillStyle="white";
+        for(i=0;i<50;i++) 
+        {
+            ctx.fillRect(plat[i].x,plat[i].y,plat[i].w,plat[i].h);
+        }
+    }
+    function keyDown(evt) 
+    {
+        switch(evt.keyCode) 
+        {
+            case 65:
+                holdLeft=true;
+                break;
+            case 87:
+                if(onG) 
+                {
+                    yv=-10;
+                }
+                break;
+            case 68:
+                holdRight=true;
+                break;
+        }
+    }
+    function keyUp(evt) 
+    {
+        switch(evt.keyCode) 
+        {
+            case 65:
+                holdLeft=false;
+                break;
+            case 87:
+                if(yv<-3) 
+                {
+                    yv=-3;
+                }
+                break;
+            case 68:
+                holdRight=false;
+                break;
+        }
+    }
+    </script>
+</body>
+</html>
